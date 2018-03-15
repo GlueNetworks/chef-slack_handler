@@ -16,6 +16,12 @@
 # limitations under the License.
 #
 
+directory  "/var/chef/handlers" do
+  action :create
+  user "root"
+  group "root"
+end
+
 include_recipe "chef_handler"
 
 handler_file = ''
